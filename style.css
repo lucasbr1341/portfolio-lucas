@@ -212,11 +212,12 @@ nav a:hover {
     font-size: 0.95rem;
 }
 
-/* Hobbies */
-.hobbies-box {
-    margin-top: 20px;
-    border-top: 1px dashed var(--border-color);
-    padding-top: 15px;
+.hobbies-list {
+    list-style: none;
+    display: grid;
+    /* Correção aqui: mudado de 100px para 1fr */
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    gap: 12px;
 }
 
 .sub-comment {
