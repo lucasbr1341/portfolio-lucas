@@ -4,10 +4,238 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Lucas Vasconcelos | Portfólio</title>
-    <!-- Biblioteca de ícones simples -->
+    <!-- Biblioteca de ícones estável -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
-    <!-- Arquivo de estilo com marcador para forçar o GitHub a atualizar o cache -->
-    <link rel="stylesheet" href="estilo.css?v=2">
+    
+    <!-- Estilos embutidos para garantir o carregamento do layout executivo -->
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #f8fafc; /* Fundo cinza bem claro */
+            color: #334155;
+            overflow-x: hidden;
+        }
+
+        /* Container que divide o site em 2 colunas */
+        .app-container {
+            display: flex;
+            min-height: 100vh;
+            width: 100%;
+        }
+
+        /* COLUNA DA ESQUERDA (SIDEBAR) */
+        .sidebar {
+            width: 280px;
+            background-color: #1e3a8a; /* Azul marinho executivo */
+            color: white;
+            padding: 40px 25px;
+            flex-shrink: 0;
+        }
+
+        .sidebar-sticky {
+            position: sticky;
+            top: 40px;
+        }
+
+        .avatar-box {
+            margin-bottom: 20px;
+        }
+
+        .avatar-image {
+            width: 80px;
+            height: 80px;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 3px solid #60a5fa;
+            display: block;
+        }
+
+        .profile-name {
+            font-size: 1.3rem;
+            font-weight: 700;
+            margin-bottom: 4px;
+            color: #ffffff;
+        }
+
+        .profile-tagline {
+            font-size: 0.8rem;
+            color: #93c5fd;
+            margin-bottom: 25px;
+            font-weight: 500;
+        }
+
+        .profile-info {
+            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+            padding-bottom: 20px;
+            margin-bottom: 25px;
+        }
+
+        .info-item {
+            font-size: 0.85rem;
+            color: #cbd5e1;
+            margin-bottom: 10px;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .sidebar-nav ul {
+            list-style: none;
+        }
+
+        .sidebar-nav li {
+            margin-bottom: 12px;
+        }
+
+        .sidebar-nav a {
+            color: #93c5fd;
+            text-decoration: none;
+            font-size: 0.95rem;
+            font-weight: 500;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            transition: all 0.2s ease;
+        }
+
+        .sidebar-nav a:hover {
+            color: #ffffff;
+            padding-left: 5px;
+        }
+
+        /* COLUNA DA DIREITA (CONTEÚDO PRINCIPAL) */
+        .main-content {
+            flex-grow: 1;
+            padding: 50px 40px;
+            max-width: 900px;
+        }
+
+        .content-section {
+            margin-bottom: 40px;
+        }
+
+        .section-title {
+            font-size: 1.25rem;
+            font-weight: 700;
+            color: #1e3a8a;
+            margin-bottom: 15px;
+            border-bottom: 2px solid #e2e8f0;
+            padding-bottom: 8px;
+        }
+
+        /* Cartões brancos do conteúdo */
+        .info-card {
+            background-color: #ffffff;
+            border: 1px solid #e2e8f0;
+            border-radius: 8px;
+            padding: 24px;
+            box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
+        }
+
+        .border-left-blue {
+            border-left: 4px solid #1e3a8a;
+        }
+
+        .info-card p {
+            font-size: 0.95rem;
+            line-height: 1.6;
+            color: #475569;
+            margin-bottom: 10px;
+        }
+
+        .info-card p:last-child {
+            margin-bottom: 0;
+        }
+
+        .info-card h3 {
+            font-size: 1.05rem;
+            color: #1e293b;
+            margin-bottom: 4px;
+        }
+
+        .institution {
+            font-size: 0.9rem !important;
+            color: #64748b !important;
+            margin-bottom: 12px !important;
+        }
+
+        .status-tag {
+            display: inline-block;
+            font-size: 0.75rem;
+            background-color: #fef3c7;
+            color: #d97706;
+            padding: 4px 10px;
+            border-radius: 4px;
+            font-weight: 600;
+        }
+
+        .styled-project-list {
+            list-style: none;
+        }
+
+        .styled-project-list li {
+            font-size: 0.95rem;
+            color: #475569;
+            margin-bottom: 12px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .github-action-box {
+            margin-top: 25px;
+            border-top: 1px solid #f1f5f9;
+            padding-top: 20px;
+        }
+
+        .btn-sidebar-github {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            background-color: #1e293b;
+            color: white;
+            text-decoration: none;
+            font-size: 0.9rem;
+            font-weight: 600;
+            padding: 10px 20px;
+            border-radius: 6px;
+            transition: background-color 0.2s;
+        }
+
+        .btn-sidebar-github:hover {
+            background-color: #0f172a;
+        }
+
+        .text-blue {
+            color: #1e3a8a;
+        }
+
+        /* Responsividade para celulares */
+        @media (max-width: 768px) {
+            .app-container {
+                flex-direction: column;
+            }
+            .sidebar {
+                width: 100%;
+                padding: 30px 20px;
+            }
+            .main-content {
+                padding: 30px 20px;
+            }
+        }
+    </style>
 </head>
 <body>
 
@@ -17,11 +245,10 @@
         <aside class="sidebar">
             <div class="sidebar-sticky">
                 <div class="avatar-box">
-                    <!-- TAG DA SUA FOTO CONFIGURADA -->
                     <img src="trabalho.jpg" alt="Lucas Vasconcelos" class="avatar-image">
                 </div>
                 <h1 class="profile-name">Lucas Vasconcelos</h1>
-                <p class="profile-tagline">Estudante de engenharia de softare</p>
+                <p class="profile-tagline">Software Engineer Student</p>
                 
                 <div class="profile-info">
                     <div class="info-item">
