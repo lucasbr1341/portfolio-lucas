@@ -13,7 +13,7 @@ html {
 
 body {
     font-family: 'Inter', sans-serif;
-    background-color: #f8fafc; /* Fundo cinza bem claro para o conteúdo */
+    background-color: #f8fafc; /* Fundo cinza claro para o conteúdo */
     color: #334155;
     overflow-x: hidden;
 }
@@ -43,12 +43,14 @@ body {
     margin-bottom: 20px;
 }
 
-.avatar-placeholder {
-    width: 75px;
-    height: 75px;
-    background-color: #e2e8f0; /* Círculo cinza claro do mockup */
+/* ESTILIZAÇÃO COMPLETA DA SUA FOTO DE PERFIL */
+.avatar-image {
+    width: 80px;
+    height: 80px;
     border-radius: 50%;
-    border: 3px solid #60a5fa; /* Borda azul clara igual ao PDF */
+    object-fit: cover;
+    border: 3px solid #60a5fa; /* Borda azul clara do modelo */
+    display: block;
 }
 
 .profile-name {
