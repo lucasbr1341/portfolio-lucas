@@ -3,34 +3,54 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Portfólio - Lucas</title>
+    <title>Lucas Vasconcelos | Portfólio</title>
+    <!-- Link para ícones modernos -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Seu arquivo de estilos -->
     <link rel="stylesheet" href="estilo.css">
 </head>
 <body>
 
     <header>
-        <nav>
-            <h1>Meu Portfólio</h1>
-            <ul>
-                <li><a href="#sobre">Sobre Mim</a></li>
-                <li><a href="#formacao">Formação</a></li>
-                <li><a href="#portfolio">Portfólio</a></li>
-                <li><a href="#contato">Contato</a></li>
-            </ul>
-        </nav>
+        <div class="header-container">
+            <div class="logo">
+                <i class="fa-solid fa-code"></i> <span>Lucas.dev</span>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="#sobre"><i class="fa-regular fa-user"></i> Sobre</a></li>
+                    <li><a href="#formacao"><i class="fa-solid fa-graduation-cap"></i> Formação</a></li>
+                    <li><a href="#portfolio"><i class="fa-solid fa-briefcase"></i> Projetos</a></li>
+                    <li><a href="#contato"><i class="fa-regular fa-envelope"></i> Contato</a></li>
+                </ul>
+            </nav>
+        </div>
     </header>
 
-    <main>
-        <section class="perfil">
-            <img alt="Foto de Lucas" src="trabalho.jpg">
-            <h2>Lucas Vasconcelos Nóbrega</h2>
-            <p>Estudante de Engenharia de Software - Uninter</p>
-            <p>Bagé - Rio Grande do Sul</p>
+    <main class="main-container">
+        <!-- Seção de Destaque / Perfil -->
+        <section class="hero-section">
+            <div class="hero-avatar">
+                <img alt="Foto de Lucas" src="trabalho.jpg">
+            </div>
+            <div class="hero-content">
+                <h1>Lucas Vasconcelos Nóbrega</h1>
+                <p class="subtitle">Estudante de Engenharia de Software</p>
+                <div class="location">
+                    <i class="fa-solid fa-location-dot"></i> Bagé - Rio Grande do Sul
+                </div>
+                <div class="badges">
+                    <span class="badge">Uninter</span>
+                    <span class="badge">UI/UX Estudo</span>
+                    <span class="badge">HTML5 & CSS3</span>
+                </div>
+            </div>
         </section>
 
-        <section id="sobre">
-            <h2>Sobre Mim</h2>
-            <div>
+        <!-- Seção Sobre Mim -->
+        <section id="sobre" class="card">
+            <h2><i class="fa-solid fa-bolt text-primary"></i> Sobre Mim</h2>
+            <div class="card-content">
                 <p>
                     Meu nome é Lucas Vasconcelos Nóbrega e atualmente curso
                     Engenharia de Software na Uninter. Tenho grande interesse
@@ -44,64 +64,74 @@
                     contribuindo para a criação de soluções inovadoras.
                 </p>
 
-                <h3>Hobbies e Interesses</h3>
-                <ul>
-                    <li>Programação</li>
-                    <li>Jogos eletrônicos</li>
-                    <li>Leitura</li>
-                    <li>Música</li>
-                    <li>Tecnologia</li>
-                    <li>Aprendizado contínuo</li>
-                </ul>
+                <h3><i class="fa-solid fa-heart text-secondary"></i> Hobbies e Interesses</h3>
+                <div class="hobbies-grid">
+                    <span class="hobby-tag"><i class="fa-solid fa-terminal"></i> Programação</span>
+                    <span class="hobby-tag"><i class="fa-solid fa-gamepad"></i> Jogos eletrônicos</span>
+                    <span class="hobby-tag"><i class="fa-solid fa-book"></i> Leitura</span>
+                    <span class="hobby-tag"><i class="fa-solid fa-music"></i> Música</span>
+                    <span class="hobby-tag"><i class="fa-solid fa-microchip"></i> Tecnologia</span>
+                    <span class="hobby-tag"><i class="fa-solid fa-graduation-cap"></i> Aprendizado contínuo</span>
+                </div>
             </div>
         </section>
 
-        <section id="formacao">
-            <h2>Formação</h2>
-            <div>
-                <h3>Graduação</h3>
-                <p><strong>Curso:</strong> Engenharia de Software</p>
-                <p><strong>Instituição:</strong> Centro Universitário Internacional Uninter</p>
-                <p><strong>Status:</strong> Em andamento</p>
+        <!-- Seção Formação -->
+        <section id="formacao" class="card">
+            <h2><i class="fa-solid fa-graduation-cap text-primary"></i> Formação Acadêmica</h2>
+            <div class="card-content">
+                <div class="timeline-item">
+                    <div class="timeline-title">Graduação em Engenharia de Software</div>
+                    <div class="timeline-institution">Centro Universitário Internacional Uninter</div>
+                    <span class="status-badge processing">Em andamento</span>
+                </div>
 
-                <h3>Idiomas</h3>
-                <ul>
-                    <li>Português – Nativo</li>
-                    <li>Inglês – Básico/Intermediário</li>
-                </ul>
+                <h3><i class="fa-solid fa-language text-secondary"></i> Idiomas</h3>
+                <div class="languages-container">
+                    <div class="lang-item">
+                        <span class="lang-name">Português</span>
+                        <span class="lang-level">Nativo</span>
+                    </div>
+                    <div class="lang-item">
+                        <span class="lang-name">Inglês</span>
+                        <span class="lang-level">Básico / Intermediário</span>
+                    </div>
+                </div>
             </div>
         </section>
 
-        <section id="portfolio">
-            <h2>Portfólio</h2>
-            <div>
+        <!-- Seção Portfólio -->
+        <section id="portfolio" class="card">
+            <h2><i class="fa-solid fa-folder-open text-primary"></i> Projetos & Portfólio</h2>
+            <div class="card-content">
                 <h3>Projetos Acadêmicos</h3>
-                <ul>
-                    <li>Página Web utilizando HTML e CSS.</li>
-                    <li>Exercícios de lógica de programação.</li>
-                    <li>Projetos acadêmicos desenvolvidos durante o curso de Engenharia de Software.</li>
+                <ul class="styled-list">
+                    <li><i class="fa-solid fa-circle-check text-success"></i> Página Web responsiva utilizando HTML5 e CSS3 arquitetado de forma limpa.</li>
+                    <li><i class="fa-solid fa-circle-check text-success"></i> Algoritmos e resolução de exercícios estruturados de lógica de programação.</li>
+                    <li><i class="fa-solid fa-circle-check text-success"></i> Repositórios e projetos acadêmicos desenvolvidos ativamente durante a graduação.</li>
                 </ul>
 
-                <h3>Links</h3>
-                <p>
-                    GitHub:
-                    <a href="https://github.com/lucasbr1341" target="_blank">
-                        github.com/lucasbr1341
+                <div class="github-cta">
+                    <p>Quer acompanhar de perto o desenvolvimento dos meus códigos?</p>
+                    <a href="https://github.com/lucasbr1341" target="_blank" class="btn-github">
+                        <i class="fa-brands fa-github"></i> Visitar meu GitHub
                     </a>
-                </p>
+                </div>
             </div>
         </section>
 
-        <section id="contato">
-            <h2>Contato</h2>
-            <div>
-                <p>Você pode entrar em contato comigo através do meu GitHub acima.</p>
+        <!-- Seção Contato -->
+        <section id="contato" class="card text-center">
+            <h2><i class="fa-regular fa-paper-plane text-primary"></i> Vamos conversar?</h2>
+            <div class="card-content">
+                <p>Estou sempre aberto a novas oportunidades, conexões e projetos acadêmicos.</p>
+                <p class="margin-top">Sinta-se à vontade para se conectar comigo ou enviar uma mensagem através do meu perfil do GitHub.</p>
             </div>
         </section>
     </main>
 
     <footer>
-        <p>© 2025 - Lucas Vasconcelos Nóbrega</p>
+        <p>© 2026 - Desenvolvido com <i class="fa-solid fa-heart text-danger"></i> por Lucas Vasconcelos Nóbrega</p>
     </footer>
 
 </body>
