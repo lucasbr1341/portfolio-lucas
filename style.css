@@ -6,7 +6,8 @@
     --primary-hover: #0a58ca;
     --secondary-color: #495057;
     --dark-bg: #0f172a;
-    --light-bg: #f8fafc;
+    /* NOVA COR DE FUNDO SUAVE */
+    --light-bg: #f8fafc; 
     --card-bg: #ffffff;
     --text-main: #1e293b;
     --text-muted: #64748b;
@@ -29,7 +30,7 @@ html {
 
 body {
     font-family: 'Inter', sans-serif;
-    background-color: var(--light-bg);
+    background-color: var(--light-bg); /* Aplicação do fundo */
     color: var(--text-main);
     line-height: 1.6;
 }
