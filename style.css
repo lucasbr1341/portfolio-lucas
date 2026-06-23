@@ -1,4 +1,4 @@
-/* Importando uma fonte limpa e moderna */
+
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
 
 * {
@@ -18,14 +18,14 @@ body {
     overflow-x: hidden;
 }
 
-/* Container que divide o site em 2 colunas */
+
 .app-container {
     display: flex;
     min-height: 100vh;
     width: 100%;
 }
 
-/* COLUNA DA ESQUERDA (SIDEBAR) */
+
 .sidebar {
     width: 280px;
     background-color: #1e3a8a; /* Azul marinho executivo igual à foto */
@@ -43,7 +43,7 @@ body {
     margin-bottom: 20px;
 }
 
-/* ESTILIZAÇÃO COMPLETA DA SUA FOTO DE PERFIL */
+
 .avatar-image {
     width: 80px;
     height: 80px;
@@ -106,7 +106,7 @@ body {
     padding-left: 5px;
 }
 
-/* COLUNA DA DIREITA (CONTEÚDO PRINCIPAL) */
+
 .main-content {
     flex-grow: 1;
     padding: 50px 40px;
@@ -126,7 +126,7 @@ body {
     padding-bottom: 8px;
 }
 
-/* Cartões brancos do conteúdo */
+
 .info-card {
     background-color: #ffffff;
     border: 1px solid #e2e8f0;
